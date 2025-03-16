@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlarus</title>
+
+    <link rel="icon" type="images/x-icon" href="Images/main/icon.jpg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Duru+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="main">
+        <!-- Шапка -->
+        <div class="header">
+            <a href="#"><div data-aos="fade-left" class="main-logo"></div></a>
+            <!-- Меню гамбургер -->
+            <button data-aos="fade-right" class="Header_burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu">
+                <!-- Ссылки -->
+                <a onclick="remove_class()" href="#">Home</a>
+                <a onclick="remove_class()" href="#Gallery_href">Gallery</a>
+                <a onclick="remove_class()" href="#skills_href">Skills</a>
+                <a onclick="remove_class()" href="#portfolio-href">Portfolio</a>
+                <a onclick="remove_class()" href="#contact-href">Contact</a>
+            </div>
+        </div>
+        <div class="home">
+            <h1>Hello, I’m <br> <span>Vlarus</span>, <br>A Web <br><span class="typed"></span></h1>
+        </div>
+        <div class="about">
+            <h1><span>About:</span><br> A front-end developer, <br> who dedicated <br> himself to creating a <br> graphical interface.</h1>
+        </div>
+        <a href="#Gallery_href"><div class="button-scroll">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div></a>
+    </div>
+    <div class="Swiper-Gallery" id="Gallery_href">
+        <div class="header-gallery"><h1 data-aos="fade-down">Gallery</h1></div>
+        <div class="slider-gallery">
+            <div data-aos="fade-left" class="vector_one"></div>
+            <div data-aos="fade-right" class="vector_two"></div>
+            <!-- Инициализация свайпера -->
+            <div data-aos="fade-down" class="swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide slider_one"></div>
+                    <div class="swiper-slide slider_two"></div>
+                    <div class="swiper-slide slider_tree"></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                  
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="skills" id="skills_href">
+        <div class="header-skills">
+            <h1 data-aos="fade-right">Technical Skills</h1>
+        </div>
+        <div class="icons_box">
+            <div data-aos="fade-right"></div>
+            <div data-aos="fade-right"></div>
+            <div data-aos="fade-right"></div>
+            <div data-aos="fade-right"></div>
+            <div data-aos="fade-right"></div>
+            <div data-aos="fade-right"></div>
+        </div>
+    </div>
+    <div class="portfolio" id="portfolio-href">
+        <div class="portfolio-header"><h1 data-aos="fade-right">Portfolio</h1></div>
+        <div class="tour" data-aos="fade-right">
+            <div></div>
+        </div>
+        <div class="ticket" data-aos="fade-right">
+            <h1>Advertising website for ticket <br> sales.</h1>
+            <div>
+                <button>Git Hub</button>
+                <button>Figma</button>
+            </div>
+        </div>
+        <div class="seo" data-aos="fade-right">
+            <h1>Website for SEO optimization <br> and promotion</h1>
+            <div>
+                <button>Git Hub</button>
+                <button>Figma</button>
+            </div>
+        </div>
+        <div class="photo-seo" data-aos="fade-right">
+            <div></div>
+        </div>
+    </div>
+    <div class="contact" id="contact-href">
+        <div class="contact_header"><h1 data-aos="fade-right">Contact</h1></div>
+        <div class="photo">
+            <div data-aos="fade-right"></div>
+        </div>
+        <div data-aos="fade-right" class="social">
+            <form action="sandmail.php" method="post">
+                <input type="email" name="email" class="input_one" required>
+                <label for="" class="label_name">e-mail</label>
+                <textarea name="message" required></textarea>
+                <label for="" class="label_message">Message</label>
+                <input type="submit" value="Submit" class="submit">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <label>Made by Vlarus</label>
+    </div>
+</body>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+</html>

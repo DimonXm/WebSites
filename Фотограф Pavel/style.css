@@ -1,0 +1,696 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.burgerButton {
+  display: none;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header {
+  width: 315px;
+  margin-left: 50px;
+  height: 100%;
+  position: fixed;
+  -webkit-animation-name: header_animations;
+          animation-name: header_animations;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.header .logo {
+  margin-top: 52px;
+  margin-bottom: 57px;
+  width: 70%;
+  height: 20%;
+  background-image: url(icons/Logo_Pavel.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header .burger {
+  margin-bottom: 91px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 30%;
+}
+.header .burger div {
+  border: none;
+  font-family: "Didact Gothic";
+  margin-bottom: 20px;
+  font-size: 26px;
+  padding-left: 20px;
+  width: 60%;
+  position: relative;
+}
+.header .burger div > hr {
+  width: 0;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.header .burger div > a {
+  text-decoration: none;
+  color: black;
+}
+.header .burger div:hover hr {
+  opacity: 1;
+  width: 75%;
+  background-color: black;
+  height: 2px;
+  border-radius: 10px;
+}
+.header .social {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.header .social .VK {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  bottom: 60px;
+  background-image: url(icons/vk_icon_135042\(2\).png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header .social .VK:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.header .social .Telgram {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  bottom: 60px;
+  left: 36px;
+  background-image: url(icons/telegram_logo_icon_144811.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header .social .Telgram:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.header .social .Phone {
+  font-size: 26px;
+  font-family: "Didact Gothic";
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+}
+
+.aboutMe {
+  width: 69%;
+  height: 93%;
+  border-radius: 53px;
+  border: 2px solid black;
+  position: absolute;
+  right: 50px;
+  top: 43px;
+  -webkit-animation-name: AboutMe_animations;
+          animation-name: AboutMe_animations;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50px calc(100% - 50px);
+  grid-template-rows: 50px calc(100% - 50px);
+      grid-template-areas: "header header" "description photo";
+}
+.aboutMe .headerAboutMe {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  text-align: center;
+  font-family: "Didact Gothic";
+  font-size: 36px;
+  font-weight: 500;
+}
+.aboutMe .description {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: description;
+  margin-top: 20px;
+  font-family: "Didact Gothic";
+  text-align: left;
+  padding-left: 70px;
+  font-size: 24px;
+}
+.aboutMe .descriptionLow {
+  display: none;
+}
+.aboutMe .photo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: photo;
+  margin-right: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 53px;
+  background-image: url(image/AboutMe.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Portfolio {
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.Portfolio .myWorks {
+  width: 69%;
+  height: 93%;
+  border-radius: 53px;
+  border: 2px solid black;
+  position: absolute;
+  right: 50px;
+  top: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.Portfolio .myWorks .h1MyWorks {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  font-family: "Didact Gothic";
+  font-size: 36px;
+}
+.Portfolio .myWorks .photosWorks {
+  width: 100%;
+  height: calc(100% - 50px);
+  position: relative;
+}
+.Portfolio .myWorks .photosWorks > div:nth-child(1) {
+  position: absolute;
+  z-index: 1;
+  left: 14%;
+  width: 27%;
+  height: 407px;
+  background-image: url(image/one.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.Portfolio .myWorks .photosWorks > div:nth-child(2) {
+  position: absolute;
+  top: 209px;
+  left: 28%;
+  width: 45%;
+  height: 370px;
+  background-image: url(image/two.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.Portfolio .myWorks .photosWorks > div:nth-child(3) {
+  position: absolute;
+  width: 30%;
+  height: 506px;
+  left: 58%;
+  background-image: url(image/three.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.studia {
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.studia .studiaMain {
+  width: 69%;
+  height: 93%;
+  border-radius: 53px;
+  border: 2px solid black;
+  position: absolute;
+  right: 50px;
+  top: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.studia .studiaMain .h1_studia {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  font-family: "Didact Gothic";
+  font-size: 36px;
+}
+.studia .studiaMain .photoStudia {
+  width: 100%;
+  height: calc(100% - 50px);
+  position: relative;
+}
+.studia .studiaMain .photoStudia > div:nth-child(1) {
+  position: absolute;
+  border-radius: 20px;
+  width: 50%;
+  height: 296px;
+  left: 5%;
+  top: 29px;
+  background-image: url(image/stOne.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.studia .studiaMain .photoStudia > div:nth-child(2) {
+  position: absolute;
+  border-radius: 20px;
+  width: 50%;
+  height: 258px;
+  background-image: url(image/stThree.jpg);
+  top: 283px;
+  left: 10%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.studia .studiaMain .photoStudia > div:nth-child(3) {
+  position: absolute;
+  border-radius: 20px;
+  width: 49%;
+  height: 225px;
+  top: 185px;
+  right: 5%;
+  background-image: url(image/stTwo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.direction {
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.direction .directionMain {
+  width: 69%;
+  height: 93%;
+  border-radius: 53px;
+  border: 2px solid black;
+  position: absolute;
+  right: 50px;
+  top: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.direction .directionMain .h1DirectionMain {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  font-family: "Didact Gothic";
+  font-size: 36px;
+}
+.direction .directionMain .directionPhoto {
+  width: 100%;
+  height: calc(100% - 50px);
+  position: relative;
+}
+.direction .directionMain .directionPhoto > div {
+  position: absolute;
+  left: 18%;
+  top: 15px;
+  width: 65%;
+  height: 322px;
+  background-image: url(image/direction.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+.direction .directionMain .directionPhoto > p {
+  position: absolute;
+  top: 350px;
+  left: 6.3%;
+  width: 624px;
+  height: 126px;
+  font-family: "Didact Gothic";
+  font-size: 26px;
+}
+.direction .directionMain .directionPhoto > form {
+  width: 30%;
+  position: absolute;
+  top: 475px;
+  left: 6.3%;
+}
+.direction .directionMain .directionPhoto > form > button {
+  width: 100%;
+  height: 56px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  border: none;
+  font-family: "Didact Gothic";
+  font-size: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 2px solid black;
+}
+.direction .directionMain .directionPhoto > form > button:hover {
+  background-color: white;
+  color: black;
+}
+
+@-webkit-keyframes AboutMe_animations {
+  from {
+    opacity: 0;
+    top: -20px;
+  }
+  to {
+    opacity: 1;
+    top: 43px;
+  }
+}
+
+@keyframes AboutMe_animations {
+  from {
+    opacity: 0;
+    top: -20px;
+  }
+  to {
+    opacity: 1;
+    top: 43px;
+  }
+}
+@-webkit-keyframes header_animation_mobile {
+  from {
+    opacity: 0;
+    margin-left: -100px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes header_animation_mobile {
+  from {
+    opacity: 0;
+    margin-left: -100px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@-webkit-keyframes header_animations {
+  from {
+    opacity: 0;
+    margin-left: 0;
+  }
+  to {
+    margin-left: 50px;
+    opacity: 1;
+  }
+}
+@keyframes header_animations {
+  from {
+    opacity: 0;
+    margin-left: 0;
+  }
+  to {
+    margin-left: 50px;
+    opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+  .photo {
+    border-radius: 20px !important;
+  }
+  .headerAboutMe {
+    font-size: 36px !important;
+  }
+  .photo {
+    margin-right: 10px !important;
+  }
+  .header {
+    display: none;
+    -webkit-animation-name: header_animation_mobile;
+            animation-name: header_animation_mobile;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
+  }
+  .myWorks {
+    width: 90% !important;
+    right: 5% !important;
+  }
+  .photosWorks div:nth-child(1) {
+    width: 60% !important;
+    left: 10px !important;
+  }
+  .photosWorks div:nth-child(3) {
+    width: 50% !important;
+    left: 48% !important;
+  }
+  .photosWorks div:nth-child(2) {
+    width: 55% !important;
+    z-index: 1;
+    left: 18% !important;
+  }
+  .studiaMain {
+    width: 90% !important;
+    right: 5% !important;
+  }
+  .photoStudia > div:nth-child(1) {
+    width: 80% !important;
+    top: 60px !important;
+    height: 200px !important;
+  }
+  .photoStudia > div:nth-child(2) {
+    width: 80% !important;
+    top: 288px !important;
+    height: 200px !important;
+  }
+  .photoStudia > div:nth-child(3) {
+    width: 80% !important;
+    top: 180px !important;
+    height: 200px !important;
+  }
+  .aboutMe {
+    width: 90% !important;
+    right: 5%;
+    border: none;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    -ms-grid-rows: 50px 30% 65%;
+    grid-template-rows: 50px 30% 65%;
+        grid-template-areas: "header" "description" "photo";
+  }
+  .aboutMe .description {
+    display: none;
+  }
+  .aboutMe .headerAboutMe {
+    width: 100%;
+  }
+  .aboutMe .descriptionLow {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    text-align: center;
+    margin-top: 20px;
+    grid-area: description;
+    display: block;
+    width: 100%;
+    font-family: "Didact Gothic";
+    font-size: 18px;
+  }
+  @media (max-width: 480px) {
+  .aboutMe .descriptionLow {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+  }
+  }
+  .aboutMe .photo {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .direction {
+    height: 100% !important;
+  }
+  .directionMain {
+    width: 90% !important;
+    height: 70% !important;
+    right: 5% !important;
+  }
+  .directionPhoto > div {
+    width: 90% !important;
+    left: 5% !important;
+    height: 200px !important;
+  }
+  .directionPhoto > p {
+    top: 225px !important;
+    font-size: 20px !important;
+  }
+  .directionPhoto > form {
+    top: 325px !important;
+    width: 45% !important;
+  }
+  .directionPhoto > form > button {
+    font-size: 26px !important;
+  }
+  .burgerButton {
+    display: block;
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    left: 5px;
+    top: 20px;
+  }
+  .burgerButton > span {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    position: absolute;
+    height: 30px;
+    top: 8px;
+    left: 19px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .burgerButton > span:nth-child(1) {
+    top: -6px;
+    border: 2px solid black;
+  }
+  .burgerButton > span:nth-child(2) {
+    top: 4px;
+    border: 2px solid black;
+  }
+  .burgerButton > span:nth-child(3) {
+    top: 14px;
+    border: 2px solid black;
+  }
+  .open .header {
+    display: block;
+    background-color: white;
+    z-index: 1;
+    width: 75%;
+    height: 100%;
+    margin-left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .open .header .social {
+    bottom: 16%;
+  }
+  .open .header .VK {
+    bottom: 30%;
+    left: 20px;
+  }
+  .open .header .Telgram {
+    bottom: 30%;
+    left: 56px;
+  }
+  .open .header .Phone {
+    bottom: calc(30% - 30px);
+    left: 20px;
+  }
+  .open > .burgerButton {
+    z-index: 2;
+  }
+  .open > .burgerButton > span:nth-child(1) {
+    top: 4px;
+    border: 2px solid black;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .open > .burgerButton > span:nth-child(2) {
+    opacity: 0;
+  }
+  .open > .burgerButton > span:nth-child(3) {
+    top: 4px;
+    border: 2px solid black;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .aboutMe .headerAboutMe {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .aboutMe .description {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .aboutMe .photo {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+}

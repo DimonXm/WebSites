@@ -1,0 +1,619 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.burgerButton {
+    display: none;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.header {
+    width: 315px;
+    margin-left: 50px;
+    height: 100%;
+    position: fixed;
+    animation-name: header_animations;
+    animation-duration: 0.5s;
+    .logo {
+        margin-top: 52px;
+        margin-bottom: 57px;
+        width: 70%;
+        height: 20%;
+        background-image: url(icons/Logo_Pavel.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .burger {
+        margin-bottom: 91px;
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+        div {
+            border: none;
+            font-family: "Didact Gothic";
+            margin-bottom: 20px;
+            font-size: 26px;
+            padding-left: 20px;
+            width: 60%;
+            position: relative;
+            > hr {
+                width: 0;
+                position: absolute;
+                left: 15px;
+                top: 20px;
+                opacity: 0;
+                transition: 0.5s;
+                pointer-events: none;
+            }
+            > a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+        div:hover hr {
+            opacity: 1;
+            width: 75%;
+            background-color: black;
+            height: 2px;
+            border-radius: 10px;
+        }
+    }
+    .social {
+        height: 20%;
+        display: flex;
+        position: relative;
+        .VK {
+            position: absolute;
+            height: 36px;
+            width: 36px;
+            bottom: 60px;
+            background-image: url(icons/vk_icon_135042\(2\).png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: 0.5s;
+        }
+
+        .VK:hover {
+            transform: translateY(-10px);
+        }
+
+        .Telgram {
+            position: absolute;
+            height: 36px;
+            width: 36px;
+            bottom: 60px;
+            left: 36px;
+            background-image: url(icons/telegram_logo_icon_144811.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: 0.5s;
+        }
+
+        .Telgram:hover {
+            transform: translateY(-10px);
+        }
+
+        .Phone {
+            font-size: 26px;
+            font-family: "Didact Gothic";
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+        }
+    }
+}
+
+.aboutMe {
+    width: 69%;
+    height: 93%;
+    border-radius: 53px;
+    border: 2px solid black;
+    position: absolute;
+    right: 50px;
+    top: 43px;
+    animation-name: AboutMe_animations;
+    animation-duration: 0.5s;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px calc(100% - 50px);
+    grid-template-areas: 
+                            "header header"
+                             "description photo";
+    .headerAboutMe {
+        grid-area: header;
+        text-align: center;
+        font-family: "Didact Gothic";
+        font-size: 36px;
+        font-weight: 500;
+    }
+    .description {
+        grid-area: description;
+        margin-top: 20px;
+        font-family: "Didact Gothic";
+        text-align: left;
+        padding-left: 70px;
+        font-size: 24px;
+    }
+
+    .descriptionLow {
+        display: none;
+    }
+
+    .photo {
+        grid-area: photo;
+        margin-right: 70px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 53px;
+        background-image: url(image/AboutMe.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.Portfolio {
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .myWorks {
+        width: 69%;
+        height: 93%;
+        border-radius: 53px;
+        border: 2px solid black;
+        position: absolute;
+        right: 50px;
+        top: 43px;
+        display: flex;
+        flex-direction: column;
+        .h1MyWorks {
+            position: relative;
+            top: -20px;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            margin-top: 20px;
+            font-family: "Didact Gothic";
+            font-size: 36px;
+        }
+        .photosWorks {
+            width: 100%;
+            height: calc(100% - 50px);
+            position: relative;
+            > div:nth-child(1) {
+                position: absolute;
+                z-index: 1;
+                left: 14%;
+                width: 27%;
+                height: 407px;
+                background-image: url(image/one.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            > div:nth-child(2) {
+                position: absolute;
+                top: 209px;
+                left: 28%;
+                width: 45%;
+                height: 370px;
+                background-image: url(image/two.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            > div:nth-child(3) {
+                position: absolute;
+                width: 30%;
+                height: 506px;
+                left: 58%;
+                background-image: url(image/three.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+.studia {
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .studiaMain {
+        width: 69%;
+        height: 93%;
+        border-radius: 53px;
+        border: 2px solid black;
+        position: absolute;
+        right: 50px;
+        top: 43px;
+        display: flex;
+        flex-direction: column;
+        .h1_studia {
+            position: relative;
+            top: -20px;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            margin-top: 20px;
+            font-family: "Didact Gothic";
+            font-size: 36px;
+        }
+        .photoStudia {
+            width: 100%;
+            height: calc(100% - 50px);
+            position: relative;
+            > div:nth-child(1) {
+                position: absolute;
+                border-radius: 20px;
+                width: 50%;
+                height: 296px;
+                left: 5%;
+                top: 29px;
+                background-image: url(image/stOne.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            > div:nth-child(2) {
+                position: absolute;
+                border-radius: 20px;
+                width: 50%;
+                height: 258px;
+                background-image: url(image/stThree.jpg);
+                top: 283px;
+                left: 10%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            > div:nth-child(3) {
+                position: absolute;
+                border-radius: 20px;
+                width: 49%;
+                height: 225px;
+                top: 185px;
+                right: 5%;
+                background-image: url(image/stTwo.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.direction {
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .directionMain {
+        width: 69%;
+        height: 93%;
+        border-radius: 53px;
+        border: 2px solid black;
+        position: absolute;
+        right: 50px;
+        top: 43px;
+        display: flex;
+        flex-direction: column;
+        
+        .h1DirectionMain {
+            position: relative;
+            top: -20px;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            margin-top: 20px;
+            font-family: "Didact Gothic";
+            font-size: 36px;
+        }
+        .directionPhoto {
+            width: 100%;
+            height: calc(100% - 50px);
+            position: relative;
+            > div {
+                position: absolute;
+                left: 18%;
+                top: 15px;
+                width: 65%;
+                height: 322px;
+                background-image: url(image/direction.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 20px;
+            }
+            > p {
+                position: absolute;
+                top: 350px;
+                left: 6.3%;
+                width: 624px;
+                height: 126px;
+                font-family: "Didact Gothic";
+                font-size: 26px;
+            }
+            > form {
+                width: 30%;
+                position: absolute;
+                top: 475px;
+                left: 6.3%;
+                > button {
+                    width: 100%;
+                    height: 56px;
+                    color: white;
+                    background-color: black;
+                    border-radius: 10px;
+                    border: none;
+                    font-family: "Didact Gothic";
+                    font-size: 30px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    border: 2px solid black;
+                }
+                > button:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@keyframes AboutMe_animations {
+    from {
+        opacity: 0;
+        top: -20px;
+
+    }
+    to {
+        opacity: 1;
+        top: 43px;
+    }
+}
+
+@keyframes header_animation_mobile {
+    from {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+@keyframes header_animations {
+    from {
+        opacity: 0;
+        margin-left: 0;
+
+    }
+    to {
+        margin-left: 50px;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo {
+        border-radius: 20px !important;
+    }
+    .headerAboutMe {
+        font-size: 36px !important;
+    }
+    .photo {
+        margin-right: 10px !important;
+    }
+
+    .header {
+        display: none;
+        animation-name: header_animation_mobile;
+        animation-duration: 0.8s;
+    }
+
+    .myWorks {
+        width: 90% !important;
+        right: 5% !important;
+    }
+    .photosWorks {
+        div:nth-child(1) {
+            width: 60% !important;
+            left: 10px !important;
+        }
+        div:nth-child(3) {
+            width: 50% !important;
+            left: 48% !important;
+        }
+        div:nth-child(2) {
+            width: 55% !important;
+            z-index: 1;
+            left: 18% !important;
+        }
+    } 
+
+    .studiaMain {
+        width: 90% !important;
+        right: 5% !important;
+    }
+    .photoStudia {
+        > div:nth-child(1) {
+            width: 80% !important;
+            top: 60px !important;
+            height: 200px !important;
+        }
+        > div:nth-child(2) {
+            width: 80% !important;
+            top: 288px !important;
+            height: 200px !important;
+        }
+        > div:nth-child(3) {
+            width: 80% !important;
+            top: 180px !important;
+            height: 200px !important;
+        }
+    }
+
+    .aboutMe {
+        width: 90% !important;
+        right: 5%;
+        border: none;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 30% 65%;
+        grid-template-areas: 
+                            "header"
+                            "description"
+                            "photo";
+        .description {
+            display: none;
+        }
+        .headerAboutMe {
+            width: 100%;
+        }
+        .descriptionLow {
+            text-align: center;
+            margin-top: 20px;
+            grid-area: description;
+            display: block;
+            width: 100%;
+            font-family: "Didact Gothic";
+            font-size: 18px;
+        }
+        .photo {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    .direction {
+        height: 100% !important;
+    }
+
+    .directionMain {
+        width: 90% !important;
+        height: 70% !important;
+        right: 5% !important;
+    }
+    .directionPhoto {
+        > div {
+            width: 90% !important;
+            left: 5% !important;
+            height: 200px !important;
+        }
+        > p {
+            top: 225px !important;
+            font-size: 20px !important;
+        }
+        > form {
+            top: 325px !important;
+            width: 45% !important;
+            > button {
+                font-size: 26px !important;
+            }
+        }
+    }
+
+    .burgerButton {
+        display: block;
+        position: fixed;
+        width: 48px;
+        height: 48px;
+        border: 2px solid transparent;
+        background-color: transparent;
+        left: 5px;
+        top: 20px;
+        > span {
+            transform: rotate(90deg);
+            position: absolute;
+            height: 30px;
+            top: 8px;
+            left: 19px;
+            transition: 0.5s;
+        }
+        > span:nth-child(1) {
+            top: -6px;
+            border: 2px solid black;
+        }
+        > span:nth-child(2) {
+            top: 4px;
+            border: 2px solid black;
+        }
+        > span:nth-child(3) {
+            top: 14px;
+            border: 2px solid black;
+        }
+    }
+    .open {
+        .header {
+            display: block;
+            background-color: white;
+            z-index: 1;
+            width: 75%;
+            height: 100%;
+            margin-left: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            .social {
+                bottom: 16%;
+            }
+            .VK {
+                bottom: 30%;
+                left: 20px;
+            }
+            .Telgram {
+                bottom: 30%;
+                left: 56px;
+            }
+            .Phone {
+                bottom: calc(30% - 30px);
+                left: 20px;
+            }
+        }
+    }
+    
+    .open > .burgerButton {
+        z-index: 2;
+        > span:nth-child(1) {
+            top: 4px;
+            border: 2px solid black;
+            transform: rotate(-45deg);
+        }
+        > span:nth-child(2) {
+            opacity: 0;
+        }
+        > span:nth-child(3) {
+            top: 4px;
+            border: 2px solid black;
+            transform: rotate(45deg);
+        }
+    }
+}

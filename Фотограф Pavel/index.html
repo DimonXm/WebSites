@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavel | Photographer</title>
+
+    <link rel="icon" type="image/x-icon" href="icons/Logo_Pavel.png.ico">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <button class="burgerButton" id="burgerButton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header">
+            <!-- Первый блок с логотипом -->
+            <a href="#"><div class="logo"></div></a>
+            <!-- Второй блок с бургером -->
+            <div class="burger"> 
+                <div><a href="#" onclick="deleteClass()">Обо мне</a><hr></div>
+                <div><a href="#Portfolio" onclick="deleteClass()">Портфолио</a><hr></div>
+                <div><a href="#studia" onclick="deleteClass()">Студия</a><hr></div>
+                <div><a href="#direction" onclick="deleteClass()">Запись</a><hr></div>
+            </div>
+            <!-- Третий блок с иконками -->
+            <div class="social">
+                <a href="https://vk.com/id602754537"><div class="VK"></div></a>
+                <a href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Ft.me%2Fpavel0231"><div class="Telgram"></div></a>
+                <div class="Phone">Т. 89082781736</div>
+            </div>
+        </div>
+        <div class="aboutMe">
+            <div class="headerAboutMe">Обо мне</div>
+            <div class="description"><br>Привет!<br><br>Я Павел Вихляев, фотограф,<br>создающий истории через<br>обьектив.<br><br>Каждый кадр - это живые<br>эмоции и моменты, к которым<br>хочется возвращаться.<br><br>Я помогаю сохранить важные<br>события и сделать их по-<br>настоящему незабываемыми.<br><br>Добро пожаловать!</div>
+            <div class="descriptionLow">Привет, я павел вихляев, фотограф, создающий истории через обьектив.<br>Каждый кадр - это живые эиоции и моменты, к которым хочется возвращаться.<br>Я помогаю сохранить важные события и сделать их по-настоящему незабываемыми.<br>Добро пожаловать! </div>
+            <div class="photo"></div>
+        </div>
+    </div>
+    <div class="Portfolio" id="Portfolio">
+        <div class="myWorks">
+            <div class="h1MyWorks" data-aos="fade-right">Мои работы</div>
+            <div class="photosWorks">
+                <div data-aos="fade-right"></div>
+                <div data-aos="fade-right"></div>
+                <div data-aos="fade-right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="studia" id="studia">
+        <div class="studiaMain">
+            <div class="h1_studia" data-aos="fade-right">Студия</div>
+            <div class="photoStudia">
+                <div data-aos="fade-right"></div>
+                <div data-aos="fade-right"></div>
+                <div data-aos="fade-right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="direction" id="direction">
+        <div class="directionMain">
+            <div class="h1DirectionMain" data-aos="fade-right">Запись</div>
+            <div class="directionPhoto">
+                <p>Нажимая на кнопку, вы будете<br>отправлены на сайт записи.</p>
+                <div data-aos="fade-right"></div>
+                <form action="https://dikidi.app/1715953?p=3.pi-po-ss-sd&o=2&s=18097727&rl=0_0">
+                    <button>Запись</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</html>
