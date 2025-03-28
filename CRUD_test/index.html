@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body, html {
+        margin: 0;
+        height: 100%;
+    }
+    
+    .div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .form {
+        border: 1px solid rgb(3, 148, 252);
+        height: 50%;
+        width: 30%;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+    }
+    
+    .form_register {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+    }
+    
+    h2 {
+        color: #14455d;
+        font-family: "DM Sans";
+        font-weight: 400;
+    }
+    
+    input {
+        font-family: "DM Sans";
+        font-size: 20px;
+        padding-left: 15px;
+        display: block;
+        margin-bottom: 20px;
+        width: 80%;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        background-color: #c8c8c89b;
+    }
+    
+    .button {
+        border: none;
+        background-color: #f9db57;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-bottom: 5px;
+    }
+    
+    span {
+        font-size: 14px;
+        font-family: "DM Sans";
+        font-weight: 400;
+        color: #14455d;
+    }
+    
+    .button:hover{
+        transform: scale(110%);
+    }
+    
+    .form_login {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        border-radius: 20px;
+    }
+    
+    .button_login {
+        background-color: #7ca4fb;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+    
+    .button_login:hover{
+        transform: scale(110%);
+    }
+    
+    @media (max-width:480px) {
+        .form {
+            width: 90%;
+        }
+    }</style>
+</head>
+<body>
+    <div class="div">
+        <div class="form">
+            <form action="registrator.php" method="post" class="form_register">
+                <h2>Registration</h2>
+                <input type="email" placeholder="Enter e-mail" name="email" maxlength="100" required>
+                <input type="password" placeholder="Enter password" name="password" minlength="8" maxlength="100" required>
+                <input type="submit" value="Register" class="button">
+                <span>If you have an account, then go to the login page.</span>
+            </form>
+            <form action="login.php" class="form_login">
+                <input type="submit" class="button_login" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,310 @@
+@mixin tracks {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 5px; 
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background-player.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    width: 60%;
+    height: 65%;
+    backdrop-filter: blur(10px); 
+    border: 2px solid #8be8ff;
+    border-radius: 20px;
+    position: relative;
+    top: -60px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 10px;
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+
+    .track-info {
+        display: flex;
+        justify-content: center;
+
+        .span {
+            font-family: "DM Sans";
+            color: #05b4ff;
+            font-size: 24px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+#prevBtn {
+    transform: rotate(180deg);
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #f9526eec;
+    border-radius: 100%;
+    cursor: pointer;
+    outline: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &:nth-child(2) {
+        transform: scale(120%);
+    }
+    
+    span {
+        top: 10px;
+        left: 13px;
+        position: absolute;
+        background-color: aqua;
+        height: 20px;
+        width: 2.5px;
+        border-radius: 10px;
+        transition: 0.3s;
+
+        &:nth-child(2) {
+            transform: rotate(60deg);
+            left: 21px;
+            top: 15px;
+            width: 2px;
+        }
+        
+        &:nth-child(3) {
+            transform: rotate(-60deg);
+            left: 21px;
+            top: 6px;
+            width: 2px;
+        }
+
+        &:nth-child(4) {
+            left: 30px;
+        }
+    }
+}
+
+.stopBtn {
+    span {
+        top: 10px;
+        left: 13px;
+        position: absolute;
+        background-color: aqua;
+        height: 20px;
+        width: 2.5px;
+        border-radius: 10px;
+        transition: 0.3s;
+
+        &:nth-child(2) {
+            transform: rotate(60deg);
+            left: 21px;
+            top: 15px;
+            width: 2px;
+        }
+        
+        &:nth-child(3) {
+            transform: rotate(-60deg);
+            left: 21px;
+            top: 6px;
+            width: 2px;
+        }
+    }
+}
+
+.playAnimated {
+    span {
+        width: 3px;
+        transform: rotate(180deg);
+        &:nth-child(2) {
+            transform: rotate(0);
+            top: 10px;
+            left: 24px;
+            width: 3px;
+            opacity: 0;
+        }
+
+        &:nth-child(3) {
+            transform: rotate(0);
+            top: 10px;
+            left: 24px;
+            width: 3px;
+        }
+    }
+}
+
+.content-list {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 20px;
+    scrollbar-width: thin;
+
+    div {
+        display: flex;
+        width: 100%;
+        height: 20%;
+        background-color: rgba(149, 150, 150, 0.488);
+        border: 0.5px solid rgba(149, 150, 150, 0.488);
+        align-items: center;
+        justify-content: start;
+        gap:10px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: rgba(149, 150, 150, 0.300);
+        }
+        
+        .XCELLA {
+            @include tracks;
+            background-image: url(images/imagesoftracks/xcells.jpg);
+        }
+
+        .Loneliness {
+            @include tracks;
+            background-image: url(images/imagesoftracks/loneliness.jpg);
+        }
+
+        .TIME {
+            @include tracks;
+            background-image: url(images/imagesoftracks/Time.jpg);
+        }
+
+        .BREATHING {
+            @include tracks;
+            background-image: url(images/imagesoftracks/BREATHING.jpg);
+        }
+
+        .Frozen {
+            @include tracks;
+            background-image: url(images/imagesoftracks/Frozen.jpg);
+        }
+
+        .Rain {
+            @include tracks;
+            background-image: url(images/imagesoftracks/Rain.jpg);
+        }
+
+        .ASPIRE { 
+            @include tracks;
+            background-image: url(images/imagesoftracks/ASPIRE.jpg);
+        }
+
+        h4 {
+            font-family: "Dm Sans";
+            font-size: 14px;
+            margin-left: 5px;
+            color: rgba(0, 0, 0, 0.292);
+            width: 10px;
+        }
+
+        span {
+            font-family: "DM Sans";
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.500);
+        }
+    }
+}
+
+.track-photo {
+    position: absolute;
+    left: 90px;
+    top: 80px;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/imagesoftracks/BREATHING.jpg);
+}
+
+#seekBar {
+    -webkit-appearance: none; /* Убираем стандартный стиль для WebKit */
+    appearance: none; /* Убираем стандартный стиль для всех браузеров */
+    width: 100%; /* Ширина ползунка */
+    height: 8px; /* Высота трека ползунка */
+    background: #f9526eec; /* Полупрозрачный цвет трека */
+    border-radius: 5px; /* Скругленные углы трека */
+    outline: none; /* Убираем обводку */
+    transition: background 0.3s ease-in-out; /* Плавное изменение фона */
+    cursor: pointer; /* Вид курсора */
+}
+
+#seekBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px; /* Ширина ползунка */
+    height: 10px; /* Высота ползунка */
+    background: #05b4ff; /* Цвет ползунка, соответствующий общему стилю */
+    border-radius: 50%; /* Полностью круглый ползунок */
+    transition: transform 0.3s ease-in-out; /* Плавная анимация при наведении */
+}
+
+.avatar-img {
+    position: absolute;
+    width: 175px;
+    height: 225px;
+    border: 2px solid aqua;
+    bottom: 100px;
+    right: 50px;
+    border-radius: 10px;
+}
+
+
+@media (max-width:480px) {
+    .content-list {
+        left: 20px;
+        width: 90%;
+        position: relative;
+    }
+
+    .track-photo {
+        display: none;
+    }
+
+    .player {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 100px;
+
+        .controls {
+            width: 90%;
+            left: 20px;
+            position: relative;
+        }
+    }
+}
