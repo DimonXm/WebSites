@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainId" class="main">
+            <div id="toggleBtn" class="btnburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="burgerPanel">
+                <div>NEW</div>
+                <div>GEFT GUIDE</div>
+                <div>GARTERS</div>
+                <div>UNDERWEAR</div>
+                <div>LINGERIE</div>
+                <div>LOUNGEWEAR</div>
+                <div>DESIGNERS</div>
+                <div>COLLECTIONS</div>
+                <div>SALE</div>
+            </div>
+            <div class="main_header">
+                <!-- контейнер для логотипа и иконок -->
+                <div class="main_header_logo_and_icons">
+                    <div></div>
+                    <div></div>
+                    <a href="index.html"><div class="main_header_logo"></div></a>
+                    <div class="main_header_icons">
+                        <div style="background-image: url(Иконки/Search\ icon.png);"></div>
+                        <div style="background-image: url(Иконки/Account\ icon.png);"></div>
+                        <div style="background-image: url(Иконки/Favourites\ icon.png);"></div>
+                        <div style="background-image: url(Иконки/Cart\ icon.png);"></div></a>
+                        <div class="Karla_font">2</div>
+                    </div>
+                </div>
+                <!-- контейнер для ссылок и выпадающих списков -->
+                <div class="main_header_links">
+                    <div class="main_header_links_conteiner">
+                    <a href="" style="margin-right: 8px;">NEW</a>
+                    <!-- Выпадающее меню -->
+                        <a href="#">GIFT_GUIDE</a>
+                        <a href="#">BRAS</a>
+                        <a href="#">UNDERWEAR</a>
+                    <div class="dropdown">
+                        <a href="#">LINGERIE</a>
+                        <div class="dropdown-content">
+                            <a href="#">GARTERS</a>
+                        </div>
+                    </div>
+                        <a href="#">LOWNGEWEAR</a>
+                        <a href="#">DESIGNERS</a>
+                        <a href="#">COLLECTIONS</a>
+                    <a href="">SALE</a>
+                </div>
+            </div>
+            <div class="main_grid">
+                <div class="main_grid_header">
+                    <p><b>Anais Lace Garter</b></p>
+                    <p style="color: rgba(170, 168, 168, 1);">journelle</p>
+                    <p style="color: rgba(170, 168, 168, 1);">$38</p>
+                </div>
+                <div style="background-image: url(catalog/1.jpg);" class="mobile_main_photo"></div>
+                <div class="main_grid_two_photo">
+                    <div style="background-image: url(catalog/1.jpg);"></div>
+                    <div style="background-image: url(catalog/2.png);"></div>
+                    <div style="background-image: url(catalog/3.png);"></div>
+                    <div style="background-image: url(catalog/4.png);"></div>
+                </div>
+                <div class="main_grid_photo_main">
+                    <div style="background-image: url(catalog/1.jpg);"></div>
+                </div>
+                <div class="main_grid_grid">
+                    <div class="conteiner_grid_one">
+                        <div class="span_conteiner">
+                            <span>COLOR</span>
+                            <span>NOIR</span>
+                        </div>
+                        <div class="circle_out_grid"><div class="circle_grid"></div></div>
+                        <div class="conteiner_grid_for_size">
+                            <span>SIZE</span><div style="background-image: url(catalog/Frame.png)"></div><span>SIZE GUIDE</span>
+                        </div>
+                        <div class="container_for_dimensions">
+                            <div>XS</div>
+                            <div>S</div>
+                            <div>M</div>
+                            <div>L</div>
+                        </div>
+                        <a href="cart.html"><button class="grid_button_add">Add to bag</button></a>
+                        <p>add to Wishlist</p>
+                    </div>    
+                    <div class="conteiner_grid_two">
+                            <div class="container">
+                                <!-- Section 1: DESCRIPTION -->
+                                <div class="section">
+                                    <div class="header" data-target="description">
+                                        <span>DESCRIPTION</span>
+                                        <span class="toggle-icon">+</span>
+                                    </div>
+                                    <div class="content" id="description">
+                                        <p>This is the description section. It contains detailed information about the product.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: CARE & CONTANS -->
+                                <div class="section">
+                                    <div class="header" data-target="care-contents">
+                                        <span>CARE & CONTANS</span>
+                                        <span class="toggle-icon">+</span>
+                                    </div>
+                                    <div class="content" id="care-contents">
+                                        <p>This section provides care instructions and contents of the product.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: SHIPPING & RETURNS -->
+                                <div class="section">
+                                    <div class="header" data-target="shipping-returns">
+                                        <span>SHIPPING & RETURNS</span>
+                                        <span class="toggle-icon">+</span>
+                                    </div>
+                                    <div class="content" id="shipping-returns">
+                                        <p>Information about shipping and return policies is provided here.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="main_grid_footer">
+                    <p>2 ITEMS IN THIS COLLECHION</p>
+                    <div class="footer_conteiner_flex">
+                        <div style="background-image: url(catalog/f06d2d2cca10f4ea9c82f3ba167000c5176a71e1.png);"></div>
+                        <div style="background-image: url(catalog/8cbf3408594c8dc2178077f046b53a0738b5f818.png);"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="footer">
+<div class="footer_customer_care">
+    <p class="xz"><b>Customer Care</b></p>
+    <div class="footer-section-content">
+        <p><a href="">Help Center</a></p>
+        <p><a href="">Order Status</a></p>
+        <p><a href="">Returns</a></p>
+        <p><a href="">Shipping</a></p>
+        <p><a href="">Accessibility</a></p>
+        <p><a href="">Contact Us</a></p>
+    </div>
+</div>
+
+<div class="footer_journelle">
+    <p class="xz"><b>JOURNELLE</b></p>
+    <div class="footer-section-content">
+        <p>About Us</p>
+        <p>Careers</p>
+        <p>Stores</p>
+        <p>Private Events</p>
+        <p>Le Jour Blog</p>
+        <p>Gift Card</p>
+        <p>888.885.6876</p>
+    </div>
+</div>
+
+<div class="footer_lingerie_experts">
+    <p class="xz"><b>LINGERIE EXPERTS</b></p>
+    <div class="footer-section-content">
+        <p>Bra Fittings</p>
+        <p>How to Gift Lingerie</p>
+        <p>Find Your Size</p>
+        <p>Find Your Shape</p>
+        <p>Wear & Care</p>
+    </div>
+</div>
+        <div class="footer_search">
+            <input placeholder="your@email.com" type="text">
+            <div class="footer_container_icons">
+                <div style="background-image: url(Иконки/Facebook\ icon.png);"></div>
+                <div style="background-image: url(Иконки/Twitter\ icon.png);"></div>
+                <div style="background-image: url(Иконки/Pinterest\ icon.png);"></div>
+                <div style="background-image: url(Иконки/Instagram\ icon.png);"></div>
+            </div>
+        </div>
+        <div class="footer_footer">
+            <span><a href="">Privacy Policy</a></span>
+            <span><a href="">Terms of Use</a></span>
+            <span><a href="">Site Map</a></span>
+        </div>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const headers = document.querySelectorAll('.header');
+
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const targetId = header.getAttribute('data-target');
+            const content = document.getElementById(targetId);
+            const icon = header.querySelector('.toggle-icon');
+
+            // Переключаем класс open
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                // Закрываем другие открытые секции, если нужно
+                document.querySelectorAll('.content.open').forEach(openContent => {
+                    openContent.classList.remove('open');
+                    const openIcon = openContent.closest('.section')?.querySelector('.toggle-icon');
+                    if (openIcon) openIcon.textContent = '+';
+                });
+
+                // Открываем текущую
+                content.classList.add('open');
+                icon.textContent = '-';
+            }
+        });
+    });
+});
+        document.getElementById('toggleBtn').addEventListener('click', function() {
+        var element = document.getElementById('mainId');
+        element.classList.toggle('open');});
+    </script>
+</body>
+</html>

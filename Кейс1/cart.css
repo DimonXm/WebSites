@@ -1,0 +1,853 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.burgerPanel {
+    display: none;
+    transition: 0.5s;
+}
+
+.btnburger {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    display: none;
+    top: 22px;
+    left: 10px;
+    z-index: 2;
+}
+
+.btnburger div {
+    border: none;
+    background-color: black;
+    height: 4px;
+    position: absolute;
+    width: 100%;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.btnburger div:nth-child(1) {
+    width: 100%;
+}
+
+.btnburger div:nth-child(2) {
+    width: 85%;
+    top: 13px;
+}
+
+.btnburger div:nth-child(3) {
+    width: 50%;
+    bottom: 0;
+}
+
+
+.open .btnburger div:nth-child(1) {
+    width: 100%;
+    top: 13px;
+    rotate: -135deg;
+}
+
+.open .btnburger div:nth-child(2) {
+    width: 0px;
+    display: none;
+}
+
+.open .btnburger div:nth-child(3) {
+    width: 100%;
+    bottom: 13px;
+    rotate: 135deg;
+}
+
+
+.main_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_header .main_header_links {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_header_links_conteiner {
+    width: 54%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.main_header_links_conteiner a {
+    text-decoration: none;
+    font-family: "Karla";
+    font-size: 17px;
+    color: black;
+}
+
+/* Стили для выпадающих списков */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    font-family: "Karla";
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    display: block;
+    font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* контейнер для логотипа и иконок */
+.main .main_header_logo_and_icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid aqua; */
+}
+
+.main .main_header_logo {
+    width: 200px;
+    height: 86px;
+    margin-left: 0%;
+    background: url(Логотипы/Variant\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* контейнер для ссылок и выпадающих списков */
+.main_header_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 180px;
+    height: 30px;
+    margin-right: 10%;
+}
+
+.main_header_icons div {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+
+.main_header_icons div:hover {
+    transform: translateY(-15px);
+}
+
+.main_header_icons .Karla_font {
+    font-family: "Karla";
+    font-size: 17px;
+}
+
+.main_garters {
+    width: 100%;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+.photo_main_garters {
+    width: 70%;
+    height: 419px;
+    background-image: url(gartesMain/32e6e42c9613321cf6b4dc0c121459d8b5d8986d.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.garters_conteiner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.garters_conteiner p {
+    font-family: "Karla";
+    font-size: 18px;
+    text-align: center;
+}
+.Explore_garters {
+    font-family: "Karla";
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.button_conteiner {
+    display: none;
+}
+
+.cart_title {
+    margin-top: 27px;
+    font-family: "Karla";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    font-size: 30px;
+}
+
+.cart_conteiner_for_two_box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 150px;
+    margin-top: 52px;
+}
+
+.container_for_tovar, .container_for_dollar {
+    width: 50%;
+    height: 100%;
+}
+
+.container_for_tovars {
+    width: 80%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+}
+
+.container_for_dollar {
+    margin-right: 5%;
+}
+
+.ln_and_text {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid rgba(158, 155, 155, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Karla";
+    font-size: 12px;
+}
+.tovar_one {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    gap: 5px;
+}
+
+.tovar_and_opisanie {
+    display: flex;
+    width: 40%;
+    height: 100%;
+}
+
+.tovar_and_opisanie div {
+    width: 50%;
+    height: 100%;
+}
+
+.tovar_photo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(catalog/2.png);
+}
+
+.tovar_text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    font-size: 13px;
+    color: rgba(86, 86, 86, 1);
+    gap: 8px;
+}
+
+.tovar_text span {
+    font-family: "Karla";
+}
+
+.container_for_counter {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 65%;
+    height: 30%;
+    border: 1px solid rgba(158, 155, 155, 1);
+}
+
+.counter span {
+    font-family: "Karla";
+    font-size: 25px;
+    color: rgba(87, 87, 87, 1);
+}
+
+.container_for_counter p {
+    text-decoration: underline;
+    font-family: "Karla";
+    font-size: 14px;
+    color: rgba(86, 86, 86, 1);
+}
+
+.tovar_cena {
+    width: 28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-family: "Karla";
+    font-size: 18px;
+    color: rgba(170, 168, 168, 1);
+}
+
+.container_for_dollar {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+}
+
+.conteiner_with_border {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: start;
+    border: 1px solid rgba(170, 168, 168, 1);
+}
+
+.p_for_questions {
+    font-family: "Karla";
+    font-size: 13px;
+}
+
+.p_order_summary {
+    font-family: "Karla";
+    font-size: 18px;
+}
+
+.conteiner_for_div_and_span {
+    width: 70%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conteiner_for_div_and_span div {
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner_for_div_and_span div span {
+    font-family: "Karla";
+    font-size: 16px;
+    color: rgba(170, 168, 168, 1);
+}
+
+.conteiner_with_border a {
+    width: 70%;
+    height: 40px;
+}
+
+.button_for_chekout {
+    background-color: rgba(70, 22, 107, 1);
+    border: 1px solid rgba(70, 22, 107, 1);
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: white;
+    font-family: "Karla";
+    transition: 0.5s;
+}
+
+.button_for_chekout:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.p_proceed {
+    font-family: "Karla";
+    color: rgba(61, 56, 56, 1);
+    font-size: 12px;
+}
+
+
+
+
+
+.container {
+    max-width: 600px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.section {
+    margin-bottom: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: "Karla";
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.header span:first-child {
+    text-transform: uppercase;
+    margin-left: -10px;
+}
+
+.toggle-icon {
+    font-size: 18px;
+    color: #aaa;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding: 10px 15px;
+    background-color: #fff;
+}
+
+.content p {
+    font-family: "Karla";
+}
+
+.content.open {
+    max-height: 200px; /* Подберите значение по высоте контента */
+    transition: max-height 0.6s ease-in;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #333;
+}
+
+.mobile_main_photo {
+    display: none;
+}
+
+
+
+
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.footer_customer_care {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    margin-left: 10%;
+    font-size: 17px;
+}
+
+.footer_customer_care p {
+    font-size: 17px;
+}
+
+.footer_customer_care p:nth-child(1) {
+    font-size: 20px;
+}
+
+.footer_customer_care p a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_journelle {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    font-size: 17px;
+}
+
+.footer_journelle p {
+    font-size: 17px;
+}
+
+.footer_journelle p a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_journelle p:nth-child(1) {
+    font-size: 20px;
+    cursor: auto;
+}
+
+.footer_lingerie_experts {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    font-size: 17px;
+}
+
+.footer_lingerie_experts p {
+    font-size: 17px;
+}
+
+.footer_lingerie_experts ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_lingerie_experts p:nth-child(1) {
+    font-size: 20px;
+    cursor: auto;
+}
+
+.footer_lingerie_experts ul li {
+    list-style-type: none;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+.footer_search {
+    width: 30%;
+    height: 50px;
+
+}
+
+.footer_search input {
+    font-family: "Karla";
+    width: 100%;
+    height: 20px;
+    border: 1px solid rgb(125, 124, 124);
+    border-radius: 5px;
+    outline: none;
+}
+
+.footer_container_icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    width: 30%;
+    height: 20px;
+}
+
+.footer_container_icons div {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.footer_container_icons div:hover {
+    transform: translateY(-15px);
+}
+
+.footer_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 30%;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+}
+
+.footer_footer span a {
+    text-decoration: none;
+    color: black;
+    font-family: "Karla";
+    cursor: pointer;
+}
+
+
+/* Адаптив под планшет */
+@media (max-width : 1024px) {
+    .main .main_header_logo {
+        margin-left: 35% ;
+    }
+    .main_header .main_header_links {
+        justify-content: start;
+    }
+    .main_header_links a {
+        margin-right: 10px;
+    }
+    .main_header_links a:nth-child(1) {
+        margin-left: 20px;
+    }
+    .main_photo_text {
+        width: 70%;
+    }
+    .how_to_gift_lingerie {
+        flex-direction: column-reverse;
+        height: 1000px;
+    }
+    .how_to_gift_lingerie_text {
+        width: 90%;
+    }
+    .how_to_gift_lingerie_photo {
+        width: 100%;
+    }
+    .lingerie_near_me {
+        flex-direction: column;
+    }
+    .lingerie_near_me_photo {
+        width: 100%;
+    }
+    .lingerie_near_me_text {
+        width: 90%;
+    }
+    .need_some_help_photo {
+        background-position: center;
+        background-size: cover;
+    }
+    .footer_container_icons {
+        width: 80%;
+        gap: 5px;
+    }
+    .footer_customer_care {
+        width: 25%;
+        margin-left: 2%;
+    }
+
+    .footer_journelle {
+        width: 25%;
+    }
+    .footer_lingerie_experts {
+        width: 25%;
+    }
+    .footer_footer {
+        width: 50%;
+        justify-content: start;
+        margin-left: -6%;
+    }
+
+    .garters_catalog_first div:nth-child(4) {
+        display: none;
+    }
+    .garters_catalog_first {
+        padding-left: 20px;
+    }
+
+    .footer_search input {
+        width: 70%;
+    }
+
+    .cart_conteiner_for_two_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 140vh;
+    } 
+    .container_for_dollar {
+        width: 90%;
+    }
+    .container {
+        position: relative;
+        left: -7%;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .main .main_header_logo {
+        margin-left: 34% !important;
+        width: 200px;
+    }
+    .main_header_icons {
+        gap: 2px;
+        margin-right: -1%;
+    }
+
+    .main_header_icons div  {
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+    }
+
+    .main_header_links {
+        position: absolute;
+        top: -200px;
+    }
+    .main_photo_text {
+        width: 75%;
+    }
+    .tranding_conteiner_for_photo div {
+        width: 156px;
+        height: 245px;
+    }
+    .journelle_collection_text_conteiner button {
+        width: 40%;
+    }
+    .need_some_help_photo div button {
+        width: 80%;
+        height: 30px;
+    }
+    .need_some_help_photo div {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+    }
+    .footer_customer_care p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+
+    .footer_customer_care {
+        position: relative;
+        top: 150px;
+        left: 15px;
+    }
+    .footer_journelle p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+
+    .footer_journelle {
+        position: relative;
+        top: 150px;
+        left: 45px;
+    }
+    .footer_lingerie_experts p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+    .footer_lingerie_experts {
+        position: relative;
+        top: 150px;
+        left: 75px;
+    }
+    .xz {
+        font-size: 16px;;
+    }
+    .footer_search {
+        display: flex;
+        width: 80%;
+        margin-left: -50%;
+        align-items: center;
+    }
+
+    .footer_search input {
+        position: relative;
+        top: 16px;
+    }
+
+    .btnburger {
+        display: block;
+        position: fixed;
+    }
+    .main.burgerPanel {
+        transform: translateX(-500px);
+    }
+
+    .open .burgerPanel {
+        padding-top: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        background-color: white;
+        left: 0;;
+    }
+
+    .burgerPanel div {
+        font-family: "Karla";
+        font-size: 26px;
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid rgba(61, 56, 56, 1);
+        color: rgba(61, 56, 56, 1);
+    }
+    /* .cart_conteiner_for_two_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 140vh;
+    }  */
+    .container_for_dollar {
+        width: 90%;
+    }
+    .container {
+        position: relative;
+        left: 0%;
+    }
+    .cart_conteiner_for_two_box {
+        gap: 80px;
+    }
+    .container_for_tovars {
+        width: 98%;
+    }
+    .tovar_and_opisanie {
+        gap: 15px;
+    }
+}

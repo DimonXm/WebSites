@@ -1,0 +1,854 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.burgerPanel {
+    display: none;
+    transition: 0.5s;
+}
+
+.btnburger {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    display: none;
+    top: 22px;
+    left: 10px;
+    z-index: 2;
+}
+
+.btnburger div {
+    border: none;
+    background-color: black;
+    height: 4px;
+    position: absolute;
+    width: 100%;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.btnburger div:nth-child(1) {
+    width: 100%;
+}
+
+.btnburger div:nth-child(2) {
+    width: 85%;
+    top: 13px;
+}
+
+.btnburger div:nth-child(3) {
+    width: 50%;
+    bottom: 0;
+}
+
+
+.open .btnburger div:nth-child(1) {
+    width: 100%;
+    top: 13px;
+    rotate: -135deg;
+}
+
+.open .btnburger div:nth-child(2) {
+    width: 0px;
+    display: none;
+}
+
+.open .btnburger div:nth-child(3) {
+    width: 100%;
+    bottom: 13px;
+    rotate: 135deg;
+}
+
+
+.main_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_header .main_header_links {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_header_links_conteiner {
+    width: 54%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.main_header_links_conteiner a {
+    text-decoration: none;
+    font-family: "Karla";
+    font-size: 17px;
+    color: black;
+}
+
+/* Стили для выпадающих списков */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    font-family: "Karla";
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    display: block;
+    font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* контейнер для логотипа и иконок */
+.main .main_header_logo_and_icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid aqua; */
+}
+
+.main .main_header_logo {
+    width: 200px;
+    height: 86px;
+    background: url(Логотипы/Variant\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* контейнер для ссылок и выпадающих списков */
+.main_header_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 180px;
+    height: 30px;
+    margin-right: 10%;
+}
+
+.main_header_icons div {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+
+.main_header_icons div:hover {
+    transform: translateY(-15px);
+}
+
+.main_header_icons .Karla_font {
+    font-family: "Karla";
+    font-size: 17px;
+}
+
+.main_garters {
+    width: 100%;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+.photo_main_garters {
+    width: 70%;
+    height: 419px;
+    background-image: url(gartesMain/32e6e42c9613321cf6b4dc0c121459d8b5d8986d.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.garters_conteiner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.garters_conteiner p {
+    font-family: "Karla";
+    font-size: 18px;
+    text-align: center;
+}
+.Explore_garters {
+    font-family: "Karla";
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.button_conteiner {
+    display: none;
+}
+
+
+.main_grid {
+    width: 100%;
+    height: 140vh;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 0.4fr; /* 3 строки */
+    grid-template-columns: 0.5fr 0.95fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "two_photo photo_main grid"
+        "footer footer footer";
+}
+
+.main_grid_header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.main_grid_header p {
+    margin-top: -5px;
+    font-family: "Karla";
+}
+
+.main_grid_header p:nth-child(3) {
+    margin-top: -10px;
+}
+
+.main_grid_two_photo {
+    grid-area: two_photo;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main_grid_two_photo div {
+    width: 30%;
+    height: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_grid_photo_main {
+    grid-area: photo_main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_grid_photo_main div {
+    width: 70%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conteiner_grid_one {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main_grid_grid {
+    grid-area: grid;
+}
+
+.span_conteiner span {
+    font-family: "Karla";
+    color: rgba(170, 168, 168, 1);
+}
+
+.circle_out_grid {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(170, 168, 168, 1);
+}
+
+.circle_grid {
+    width: 29px;
+    height: 29px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.conteiner_grid_for_size {
+    width: 33%;
+    height: 20px;
+    font-family: "Karla";
+    color: rgba(170, 168, 168, 1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner_grid_for_size div {
+    width: 20px;
+    height: 20px;
+}
+
+.main_grid_footer {
+    grid-area: footer;
+}
+
+.container_for_dimensions {
+    width: 24%;
+    height: 54px;
+    display: flex;
+    align-items: center;
+}
+
+.container_for_dimensions div {
+    width: 40px;
+    height: 46px;
+    border: 1px solid rgba(170, 168, 168, 1);
+    color: rgba(170, 168, 168, 1);
+    font-family: "Karla";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid_button_add {
+    width: 60%;
+    height: 40px;
+    border: none;
+    background-color: rgba(70, 22, 107, 1);
+    border: 1px solid rgba(70, 22, 107, 1);
+    color: white;
+    font-family: "Karla";
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+.grid_button_add:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.conteiner_grid_one p {
+    font-family: "Karla";
+    color: rgba(208, 168, 194, 1);
+    font-size: 17px;
+}
+
+.footer_conteiner_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 757px;
+    height: 225px;
+}
+
+.main_grid_footer p {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Karla";
+    margin-left: 14.5%;
+}
+
+.footer_conteiner_flex div {
+    width: 30%;
+    height: 225px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+.container {
+    max-width: 600px;
+    margin-top: 150px;
+}
+
+.section {
+    margin-bottom: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: "Karla";
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.header span:first-child {
+    text-transform: uppercase;
+    margin-left: -10px;
+}
+
+.toggle-icon {
+    font-size: 18px;
+    color: #aaa;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding: 10px 15px;
+    background-color: #fff;
+}
+
+.content p {
+    font-family: "Karla";
+}
+
+.content.open {
+    max-height: 200px; /* Подберите значение по высоте контента */
+    transition: max-height 0.6s ease-in;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #333;
+}
+
+.mobile_main_photo {
+    display: none;
+}
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.footer_customer_care {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    margin-left: 10%;
+    font-size: 17px;
+}
+
+.footer_customer_care p {
+    font-size: 17px;
+}
+
+.footer_customer_care p:nth-child(1) {
+    font-size: 20px;
+}
+
+.footer_customer_care p a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_journelle {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    font-size: 17px;
+}
+
+.footer_journelle p {
+    font-size: 17px;
+}
+
+.footer_journelle p a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_journelle p:nth-child(1) {
+    font-size: 20px;
+    cursor: auto;
+}
+
+.footer_lingerie_experts {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    font-size: 17px;
+}
+
+.footer_lingerie_experts p {
+    font-size: 17px;
+}
+
+.footer_lingerie_experts ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_lingerie_experts p:nth-child(1) {
+    font-size: 20px;
+    cursor: auto;
+}
+
+.footer_lingerie_experts ul li {
+    list-style-type: none;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+.footer_search {
+    width: 30%;
+    height: 50px;
+
+}
+
+.footer_search input {
+    font-family: "Karla";
+    width: 100%;
+    height: 20px;
+    border: 1px solid rgb(125, 124, 124);
+    border-radius: 5px;
+    outline: none;
+}
+
+.footer_container_icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    width: 30%;
+    height: 20px;
+}
+
+.footer_container_icons div {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.footer_container_icons div:hover {
+    transform: translateY(-15px);
+}
+
+.footer_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 30%;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+}
+
+.footer_footer span a {
+    text-decoration: none;
+    color: black;
+    font-family: "Karla";
+    cursor: pointer;
+}
+
+
+/* Адаптив под планшет */
+@media (max-width : 1024px) {
+    .main .main_header_logo {
+        margin-left: 35% ;
+    }
+    .main_header .main_header_links {
+        justify-content: start;
+    }
+    .main_header_links a {
+        margin-right: 10px;
+    }
+    .main_header_links a:nth-child(1) {
+        margin-left: 20px;
+    }
+    .main_photo_text {
+        width: 70%;
+    }
+    .how_to_gift_lingerie {
+        flex-direction: column-reverse;
+        height: 1000px;
+    }
+    .how_to_gift_lingerie_text {
+        width: 90%;
+    }
+    .how_to_gift_lingerie_photo {
+        width: 100%;
+    }
+    .lingerie_near_me {
+        flex-direction: column;
+    }
+    .lingerie_near_me_photo {
+        width: 100%;
+    }
+    .lingerie_near_me_text {
+        width: 90%;
+    }
+    .need_some_help_photo {
+        background-position: center;
+        background-size: cover;
+    }
+    .footer_container_icons {
+        width: 80%;
+        gap: 5px;
+    }
+    .footer_customer_care {
+        width: 25%;
+        margin-left: 2%;
+    }
+
+    .footer_journelle {
+        width: 25%;
+    }
+    .footer_lingerie_experts {
+        width: 25%;
+    }
+    .footer_footer {
+        width: 50%;
+        justify-content: start;
+        margin-left: -6%;
+    }
+
+    .garters_catalog_first div:nth-child(4) {
+        display: none;
+    }
+    .garters_catalog_first {
+        padding-left: 20px;
+    }
+
+    .footer_search input {
+        width: 70%;
+    }
+
+        .main_grid {
+        width: 100%;
+        height: 140vh;
+        display: grid;
+        grid-template-rows: 0.2fr 1fr 0.4fr; /* 3 строки */
+        grid-template-columns: 0.3fr 1fr 1fr;
+        }
+    .conteiner_grid_for_size {
+        width: 50%;
+    }
+    .main_grid_photo_main div {
+        width: 90%;
+    }
+    .main_grid_two_photo div {
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .main .main_header_logo {
+        margin-left: 34% !important;
+        width: 200px;
+    }
+    .main_header_icons {
+        gap: 2px;
+        margin-right: -1%;
+    }
+
+    .main_header_icons div  {
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+    }
+
+    .main_header_links {
+        position: absolute;
+        top: -200px;
+    }
+    .main_photo_text {
+        width: 75%;
+    }
+    .tranding_conteiner_for_photo div {
+        width: 156px;
+        height: 245px;
+    }
+    .journelle_collection_text_conteiner button {
+        width: 40%;
+    }
+    .need_some_help_photo div button {
+        width: 80%;
+        height: 30px;
+    }
+    .need_some_help_photo div {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+    }
+    .footer_customer_care p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+
+    .footer_customer_care {
+        position: relative;
+        top: 150px;
+        left: 15px;
+    }
+    .footer_journelle p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+
+    .footer_journelle {
+        position: relative;
+        top: 150px;
+        left: 45px;
+    }
+    .footer_lingerie_experts p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+    .footer_lingerie_experts {
+        position: relative;
+        top: 150px;
+        left: 75px;
+    }
+    .xz {
+        font-size: 16px;;
+    }
+    .footer_search {
+        display: flex;
+        width: 80%;
+        margin-left: -50%;
+        align-items: center;
+    }
+
+    .footer_search input {
+        position: relative;
+        top: 16px;
+    }
+
+    .btnburger {
+        display: block;
+        position: fixed;
+    }
+    .main.burgerPanel {
+        transform: translateX(-500px);
+    }
+
+    .open .burgerPanel {
+        padding-top: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        background-color: white;
+        left: 0;;
+    }
+
+    .burgerPanel div {
+        font-family: "Karla";
+        font-size: 26px;
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid rgba(61, 56, 56, 1);
+        color: rgba(61, 56, 56, 1);
+    }
+        .main_grid {
+        width: 100%;
+        height: 180vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* grid-template-rows: 0.2fr 1fr 0.4fr;
+        grid-template-columns: 0.5fr 0.95fr 1fr;
+        grid-template-areas: 
+            "header header header"
+            "two_photo photo_main grid"
+            "footer footer footer"; */
+    }
+    .footer_conteiner_flex div:nth-child(2) {
+        display: none;
+    }
+
+    .main_grid_footer p {
+        margin-left: 26%;
+    }
+    .main_grid_grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
+    .container {
+        width: 90%;
+        max-width: 90%;
+        margin-top: 20px;
+    }
+
+    .container_for_dimensions {
+        width: 40%;
+    }
+    .mobile_main_photo {
+        display: block;
+        width: 90%;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .grid_button_add {
+        width: 90%;
+        margin-left: 5%;
+    }
+}

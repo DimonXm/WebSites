@@ -1,0 +1,844 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.burgerPanel {
+    display: none;
+    transition: 0.5s;
+}
+
+.btnburger {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    display: none;
+    top: 22px;
+    left: 10px;
+    z-index: 2;
+}
+
+.btnburger div {
+    border: none;
+    background-color: black;
+    height: 4px;
+    position: absolute;
+    width: 100%;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.btnburger div:nth-child(1) {
+    width: 100%;
+}
+
+.btnburger div:nth-child(2) {
+    width: 85%;
+    top: 13px;
+}
+
+.btnburger div:nth-child(3) {
+    width: 50%;
+    bottom: 0;
+}
+
+
+.open .btnburger div:nth-child(1) {
+    width: 100%;
+    top: 13px;
+    rotate: -135deg;
+}
+
+.open .btnburger div:nth-child(2) {
+    width: 0px;
+    display: none;
+}
+
+.open .btnburger div:nth-child(3) {
+    width: 100%;
+    bottom: 13px;
+    rotate: 135deg;
+}
+
+
+.main_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_header .main_header_links {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_header_links_conteiner {
+    width: 54%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_header_links_conteiner a {
+    text-decoration: none;
+    font-family: "Karla";
+    font-size: 17px;
+    color: black;
+}
+
+/* Стили для выпадающих списков */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    font-family: "Karla";
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    display: block;
+    font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* контейнер для логотипа и иконок */
+.main .main_header_logo_and_icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid aqua; */
+}
+
+.main .main_header_logo {
+    width: 200px;
+    height: 86px;
+    margin-left: 43%;
+    background: url(Логотипы/Variant\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* контейнер для ссылок и выпадающих списков */
+.main_header_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 180px;
+    height: 30px;
+    margin-right: 10%;
+}
+
+.main_header_icons div {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+
+.main_header_icons div:hover {
+    transform: translateY(-15px);
+}
+
+.main_header_icons .Karla_font {
+    font-family: "Karla";
+    font-size: 17px;
+}
+
+.main_photo_and_SALE {
+    width: 100%;
+    height: 684px;
+    background-image: url(Главная/Frame\ 28.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_photo_text {
+    position: relative;
+    top: 40%;
+    left: 15%;
+    width: 30%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_photo_text_SEMI {
+    text-align: center;
+    color: white;
+    font-family: "Karla";
+    font-size: 48px;
+}
+
+.main_photo_text30 {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-family: "Karla";
+    font-size: 18px;
+}
+
+.main_photo_text button {
+    margin-top: 34px;
+    width: 40%;
+    height: 40px;
+    font-family: "Karla";
+    font-size: 18px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: rgba(70, 22, 107, 1);
+}
+
+.logos_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: 120px;
+    margin-top: 60px;
+    background-color: rgba(70, 22, 107, 1);
+}
+
+.logos_container div {
+    width: 150px;
+    height: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tranding {
+    width: 100%;
+    height: 100vh;
+}
+
+.trading_text {
+    position: relative;
+    top: 16%;
+    width: 100%;
+    height: 50px;
+    font-size: 28px;
+    font-family: Karla;
+    text-align: center;
+}
+
+.flex_container_tranding {
+    display: flex;
+    position: relative;
+    top: 20%;
+    justify-content: center;
+    gap: 2%;
+}
+
+.tranding_conteiner_for_photo div {
+    width: 256px;
+    height: 345px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tranding_conteiner_for_photo p {
+    text-align: center;
+    color: black;
+    font-family: "Karla";
+    font-size: 18px;
+}
+
+.journelle_collection {
+    background: url(Journelle_Collection/journelle_collection.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.journelle_collection_text_conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.journelle_collection_text {
+    color: white;
+    font-size: 50px;
+    font-family: "Karla";
+    text-align: center;
+}
+
+.journelle_collection_text_say {
+    margin-top: 20px;
+    color: white;
+    font-size: 22px;
+    font-family: "Karla";
+    text-align: center;
+}
+
+.journelle_collection_text_conteiner button {
+    margin-top: 34px;
+    width: 12%;
+    height: 40px;
+    font-family: "Karla";
+    font-size: 18px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: rgba(70, 22, 107, 1);
+}
+
+.logos_container_white {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+}
+
+.logos_container_white div {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: "Karla";
+    width: 150px;
+    height: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.how_to_gift_lingerie {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.how_to_gift_lingerie_text {
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 2.5%;
+    margin-right: 10%;
+    height: 90%;
+    border: 1px solid rgba(158, 155, 155, 1);
+    font-family: "Karla";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.how_to_gift_lingerie_text p:nth-child(1) {
+    font-size: 40px;
+}
+
+.how_to_gift_lingerie_text p:nth-child(2) {
+    font-size: 20px;
+}
+
+.how_to_gift_lingerie_text p:nth-child(3) {
+    font-size: 20px;
+    color: rgba(196, 93, 79, 1);
+}
+
+.how_to_gift_lingerie_text p:nth-child(4) {
+    font-size: 35px;
+}
+
+.how_to_gift_lingerie_text p:nth-child(5) {
+    font-size: 13px;
+}
+
+.how_to_gift_lingerie_text p:nth-child(6) {
+    font-size: 20px;
+}
+
+.how_to_gift_lingerie_text p {
+    text-align: center;
+}
+
+.how_to_gift_lingerie_photo {
+    width: 50%;
+    height: 100%;
+    background-image: url(Главная/b7386e4fe1e6e16689f5b134deb1342aa3a0b562.png);
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lingerie_near_me {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-top: 50px;
+}
+
+.lingerie_near_me_photo {
+    width: 50%;
+    height: 100%;
+    background-image: url(Главная/500fc42f42da6ee52fa48b11739a7b088faecce7.png);
+}
+.lingerie_near_me_text {
+    width: 40%;
+    margin-top: 2.5%;
+    margin-left: 5%;
+    height: 90%;
+    border: 1px solid rgba(158, 155, 155, 1);
+    font-family: "Karla";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lingerie_near_me_text p {
+    text-align: center;
+}
+
+.lingerie_near_me_text p:nth-child(1) {
+    font-size: 40px;
+}
+
+.lingerie_near_me_text p:nth-child(2) {
+    font-size: 12px;
+}
+
+.lingerie_near_me_text p:nth-child(3) {
+    font-size: 20px;
+    color:  rgba(196, 93, 79, 1);
+}
+
+.need_some_help {
+    margin-top: 50px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.need_some_help_photo {
+    width: 90%;
+    height: 85%;
+    background-repeat: no-repeat;
+    background-position: start;
+    background-size: contain;
+    background-image: url(Главная/8e95296e0e8b76bc761866776e0754a088acd0e8.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.need_some_help_photo p {
+    font-family: "Karla";
+    text-align: center;
+}
+
+.need_some_help_photo p:nth-child(1) {
+    font-size: 45px;
+}
+.need_some_help_photo p:nth-child(2) {
+    margin-top: -20px;
+    font-size: 13px;
+}
+
+.need_some_help_photo div {
+    width: 30%;
+    display: flex;
+    gap: 50px;
+}
+
+.need_some_help_photo div button {
+    width: 50%;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid black;
+    font-size: 8px;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.footer_customer_care {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    margin-left: 10%;
+    font-size: 17px;
+}
+
+.footer_customer_care p {
+    font-size: 17px;
+}
+
+.footer_customer_care p:nth-child(1) {
+    font-size: 20px;
+}
+
+.footer_customer_care p a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_journelle {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    font-size: 17px;
+}
+
+.footer_journelle p {
+    font-size: 17px;
+}
+
+.footer_journelle p a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_journelle p:nth-child(1) {
+    font-size: 20px;
+    cursor: auto;
+}
+
+.footer_lingerie_experts {
+    width: 18%;
+    height: 350px;
+    font-family: "Karla";
+    text-align: start;
+    font-size: 17px;
+}
+
+.footer_lingerie_experts p {
+    font-size: 17px;
+}
+
+.footer_lingerie_experts ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_lingerie_experts p:nth-child(1) {
+    font-size: 20px;
+    cursor: auto;
+}
+
+.footer_lingerie_experts ul li {
+    list-style-type: none;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+.footer_search {
+    width: 30%;
+    height: 50px;
+
+}
+
+.footer_search input {
+    font-family: "Karla";
+    width: 100%;
+    height: 20px;
+    border: 1px solid rgb(125, 124, 124);
+    border-radius: 5px;
+    outline: none;
+}
+
+.footer_container_icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    width: 30%;
+    height: 20px;
+}
+
+.footer_container_icons div {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.footer_container_icons div:hover {
+    transform: translateY(-15px);
+}
+
+.footer_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 30%;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+}
+
+.footer_footer span a {
+    text-decoration: none;
+    color: black;
+    font-family: "Karla";
+    cursor: pointer;
+}
+
+
+/* Адаптив под планшет */
+@media (max-width : 1024px) {
+    .main .main_header_logo {
+        margin-left: 35% ;
+    }
+    .main_header .main_header_links {
+        justify-content: start;
+    }
+    .main_header_links a {
+        margin-right: 10px;
+    }
+    .main_header_links a:nth-child(1) {
+        margin-left: 20px;
+    }
+    .main_photo_text {
+        width: 70%;
+    }
+    .logos_container div:nth-child(3) {
+        display: none;
+    }
+    .logos_container div:nth-child(4) {
+        display: none;
+    }
+    .logos_container div:nth-child(5) {
+        display: none;
+    }
+    .flex_container_tranding div:nth-child(3) {
+        display: none;
+    }
+    .flex_container_tranding div:nth-child(4) {
+        display: none;
+    }
+    .journelle_collection_text_conteiner button {
+        width: 30%;
+    }
+    .logos_container_white div:nth-child(4) {
+        display: none;
+    }
+    .logos_container_white div:nth-child(5) {
+        display: none;
+    }
+    .logos_container_white div:nth-child(6) {
+        display: none;
+    }
+    .how_to_gift_lingerie {
+        flex-direction: column-reverse;
+        height: 1000px;
+    }
+    .how_to_gift_lingerie_text {
+        width: 90%;
+    }
+    .how_to_gift_lingerie_photo {
+        width: 100%;
+    }
+    .lingerie_near_me {
+        flex-direction: column;
+    }
+    .lingerie_near_me_photo {
+        width: 100%;
+    }
+    .lingerie_near_me_text {
+        width: 90%;
+    }
+    .need_some_help_photo {
+        background-position: center;
+        background-size: cover;
+    }
+    .footer_container_icons {
+        width: 80%;
+        gap: 5px;
+    }
+    .footer_customer_care {
+        width: 25%;
+        margin-left: 2%;
+    }
+
+    .footer_journelle {
+        width: 25%;
+    }
+    .footer_lingerie_experts {
+        width: 25%;
+    }
+    .footer_footer {
+        width: 50%;
+        justify-content: start;
+        margin-left: -6%;
+    }
+}
+
+/* Адаптив под телефон */
+@media (max-width: 430px) {
+    .main .main_header_logo {
+        margin-left: 34% !important;
+        width: 200px;
+    }
+    .main_header_icons {
+        gap: 2px;
+        margin-right: -1%;
+    }
+
+    .main_header_icons div  {
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+    }
+
+    .main_header_links {
+        position: absolute;
+        top: -200px;
+    }
+    .main_photo_text {
+        width: 75%;
+    }
+    .tranding_conteiner_for_photo div {
+        width: 156px;
+        height: 245px;
+    }
+    .journelle_collection_text_conteiner button {
+        width: 40%;
+    }
+    .need_some_help_photo div button {
+        width: 80%;
+        height: 30px;
+    }
+    .need_some_help_photo div {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+    }
+    .footer_customer_care p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+
+    .footer_customer_care {
+        position: relative;
+        top: 150px;
+        left: 15px;
+    }
+    .footer_journelle p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+
+    .footer_journelle {
+        position: relative;
+        top: 150px;
+        left: 45px;
+    }
+    .footer_lingerie_experts p {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+    .footer_lingerie_experts {
+        position: relative;
+        top: 150px;
+        left: 75px;
+    }
+    .xz {
+        font-size: 16px;;
+    }
+    .footer_search {
+        display: flex;
+        width: 80%;
+        margin-left: -50%;
+        align-items: center;
+    }
+
+    .footer_search input {
+        position: relative;
+        top: 16px;
+    }
+
+    .btnburger {
+        display: block;
+        position: fixed;
+    }
+    .main.burgerPanel {
+        transform: translateX(-500px);
+    }
+
+    .open .burgerPanel {
+        padding-top: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        background-color: white;
+        left: 0;;
+    }
+
+    .burgerPanel div {
+        font-family: "Karla";
+        font-size: 26px;
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid rgba(61, 56, 56, 1);
+        color: rgba(61, 56, 56, 1);
+    }
+}
+
